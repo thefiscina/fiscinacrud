@@ -22,10 +22,24 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [              
+              "src/css/bootstrap.min.css",
+              "src/css/font-awesome.min.css",
+              "src/css/elegant-fonts.css",
+              "src/css/themify-icons.css",
+              "src/css/swiper.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/jquery.js",
+              "src/js/jquery.collapsible.min.js",
+              "src/js/swiper.min.js",
+              "src/js/jquery.countdown.min.js",
+              "src/js/circle-progress.min.js",
+              "src/js/jquery.countTo.min.js",
+              "src/js/jquery.barfiller.js",
+              "src/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,9 +86,23 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "src/css/bootstrap.min.css",
+              "src/css/font-awesome.min.css",
+              "src/css/elegant-fonts.css",
+              "src/css/themify-icons.css",
+              "src/css/swiper.min.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/js/jquery.js",
+              "src/js/jquery.collapsible.min.js",
+              "src/js/swiper.min.js",
+              "src/js/jquery.countdown.min.js",
+              "src/js/circle-progress.min.js",
+              "src/js/jquery.countTo.min.js",
+              "src/js/jquery.barfiller.js",
+              "src/js/custom.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -123,5 +151,10 @@
       }
     }
   },
-  "defaultProject": "fiscinacrud"
+  "defaultProject": "fiscinacrud",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
