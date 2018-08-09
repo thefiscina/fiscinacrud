@@ -988,7 +988,7 @@ ul.tabs-nav .tab-nav.active {
 .our-causes {
     position: relative;
     padding: 96px 0;
-    background: url("assets/img/cause-bg.jpg") no-repeat center;
+    background: url("assets/img/congressobg.jpg") no-repeat center;
     background-size: cover;
     z-index: 99;
 }

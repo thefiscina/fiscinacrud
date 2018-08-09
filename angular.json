@@ -31,7 +31,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/js/jquery.js",
+
+              "node_modules/jquery/dist/jquery.js",
               "src/js/jquery.collapsible.min.js",
               "src/js/swiper.min.js",
               "src/js/jquery.countdown.min.js",
@@ -94,7 +95,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/js/jquery.js",
+              "node_modules/jquery/dist/jquery.js",
               "src/js/jquery.collapsible.min.js",
               "src/js/swiper.min.js",
               "src/js/jquery.countdown.min.js",

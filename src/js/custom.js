@@ -1,6 +1,5 @@
-
-(function($) {
-    // 'use strict';
+$( document ).ready(function() {
+        // 'use strict';
 
     // Main Navigation
     $( '.hamburger-menu' ).on( 'click', function() {
@@ -158,6 +157,4 @@
         $('.portfolio-item:hidden').slice(0, 9).addClass('visible');
     });
 
-
-
-})(jQuery);
+});
