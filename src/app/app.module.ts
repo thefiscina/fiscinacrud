@@ -10,6 +10,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeEventsComponent } from './home-events/home-events.component';
 import { ProjetosComponent } from './projetos/projetos.component';
 import { TimeComponent } from './time/time.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RequestService } from './request.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { TimeComponent } from './time/time.component';
     TimeComponent      
   ],
   imports: [
-    BrowserModule    
+    BrowserModule,
+    HttpClientModule    
   ],
-  providers: [],
+  providers: [RequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

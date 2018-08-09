@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestService } from '../request.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  Servico ={};
+  constructor(private _services : RequestService) { }
 
-  ngOnInit() {
+  ngOnInit() {    
+    this._services.getService().then((result) => {             
+      this.Servico = result["result"];
+      console.log(this.Servico); 
+    }, (err) => {   
+      console.log('erro ao solicitar');   
+    });   
   }
-
 }
