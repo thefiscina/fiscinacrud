@@ -8,7 +8,7 @@ import { RequestService } from '../request.service';
 })
 export class SiteHeaderComponent implements OnInit {
   
-  Servico ={};
+  Servico:any;
   constructor(private _services : RequestService) { }
 
   ngOnInit() {    
