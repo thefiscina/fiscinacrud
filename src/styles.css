@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
-
+@import '~swiper/dist/css/swiper.min.css';
 body {
     color: #262626;
     font-size: 16px;

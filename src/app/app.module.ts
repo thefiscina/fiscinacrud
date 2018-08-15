@@ -13,6 +13,20 @@ import { TimeComponent } from './time/time.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RequestService } from './request.service';
 
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  loop: true
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +41,13 @@ import { RequestService } from './request.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule    
+    HttpClientModule,
+    SwiperModule    
   ],
-  providers: [RequestService],
+  providers: [RequestService, {
+    provide: SWIPER_CONFIG,
+    useValue: DEFAULT_SWIPER_CONFIG
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
