@@ -52,4 +52,32 @@ export class RequestService {
         });
     }
 
+    getEventosService() {
+        var dado = { serviceID: this.varService }
+        return new Promise((resolve, reject) => {
+            this.http.post(this.apiUrl + 'evento/service/', JSON.stringify(dado), {
+                headers: new HttpHeaders().set("Content-Type", "application/json")
+            })
+                .subscribe(res => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
+    }
+
+    getProjetosService() {
+        var dado = { serviceID: this.varService }
+        return new Promise((resolve, reject) => {
+            this.http.post(this.apiUrl + 'projeto/service/', JSON.stringify(dado), {
+                headers: new HttpHeaders().set("Content-Type", "application/json")
+            })
+                .subscribe(res => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
+    }
+
 }

@@ -6,90 +6,33 @@
                   <div class="section-heading">
                       <h2 class="entry-title">Eventos futuros</h2>
                   </div><!-- .section-heading -->
-
-                  <div class="event-wrap d-flex flex-wrap justify-content-between">
+                  <div class="event-wrap d-flex flex-wrap justify-content-between" *ngFor="let evento of Eventos" >
                       <figure class="m-0">
-                          <img src="../../assets/img/evangelismo.jpg" alt="">
+                          <img src="{{evento.foto64}}" alt="">
                       </figure>
 
                       <div class="event-content-wrap">
                           <header class="entry-header d-flex flex-wrap align-items-center">
-                              <h3 class="entry-title w-100 m-0"><a href="#">Fundraiser for Kids</a></h3>
+                              <h3 class="entry-title w-100 m-0"><a href="#">{{evento.titulo}}</a></h3>
 
                               <div class="posted-date">
-                                  <a href="#">Aug 25, 2018 </a>
-                              </div><!-- .posted-date -->
+                                <a href="#">{{evento.data_hora | date:'dd/MM/yyyy'}} - {{evento.hora}}</a>
+                            </div><!-- .posted-date -->
 
-                              <div class="cats-links">
-                                  <a href="#">Ball Room New York</a>
-                              </div><!-- .cats-links -->
+                            <div class="cats-links">
+                                <a href="#">{{evento.endereco}}</a>
+                            </div><!-- .cats-links -->
                           </header><!-- .entry-header -->
 
                           <div class="entry-content">
-                              <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                          </div><!-- .entry-content -->
-
-                          <div class="entry-footer">
-                            <a href="#">Saiba mais</a>
-                        </div><!-- .entry-footer -->
-                      </div><!-- .event-content-wrap -->
-                  </div><!-- .event-wrap -->
-
-                  <div class="event-wrap d-flex flex-wrap justify-content-between">
-                      <figure class="m-0">
-                          <img src="../../assets/img/esfirra.jpg" alt="">
-                      </figure>
-
-                      <div class="event-content-wrap">
-                          <header class="entry-header d-flex flex-wrap align-items-center">
-                              <h3 class="entry-title w-100 m-0"><a href="#">Bring water to the childrens</a></h3>
-
-                              <div class="posted-date">
-                                  <a href="#">Aug 25, 2018 </a>
-                              </div><!-- .posted-date -->
-
-                              <div class="cats-links">
-                                  <a href="#">Ball Room New York</a>
-                              </div><!-- .cats-links -->
-                          </header><!-- .entry-header -->
-
-                          <div class="entry-content">
-                              <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
+                              <p class="m-0">{{evento.descricao}}</p>
                           </div><!-- .entry-content -->
 
                           <div class="entry-footer">
                               <a href="#">Saiba mais</a>
                           </div><!-- .entry-footer -->
                       </div><!-- .event-content-wrap -->
-                  </div><!-- .event-wrap -->
-
-                  <div class="event-wrap d-flex flex-wrap justify-content-between">
-                      <figure class="m-0">
-                          <img src="../../assets/img/festivalsorvete.jpg" alt="">
-                      </figure>
-
-                      <div class="event-content-wrap">
-                          <header class="entry-header d-flex flex-wrap align-items-center">
-                              <h3 class="entry-title w-100 m-0"><a href="#">Bring water to the childrens</a></h3>
-
-                              <div class="posted-date">
-                                  <a href="#">Aug 25, 2018 </a>
-                              </div><!-- .posted-date -->
-
-                              <div class="cats-links">
-                                  <a href="#">Ball Room New York</a>
-                              </div><!-- .cats-links -->
-                          </header><!-- .entry-header -->
-
-                          <div class="entry-content">
-                              <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.</p>
-                          </div><!-- .entry-content -->
-
-                          <div class="entry-footer">
-                            <a href="#">Saiba mais</a>
-                        </div><!-- .entry-footer -->
-                      </div><!-- .event-content-wrap -->
-                  </div><!-- .event-wrap -->
+                  </div><!-- .event-wrap -->               
               </div><!-- .upcoming-events -->
           </div><!-- .col -->
 
@@ -99,26 +42,26 @@
                       <h2 class="entry-title">Próximo evento</h2>
                   </div><!-- .section-heading -->
 
-                  <div class="cause-wrap d-flex flex-wrap justify-content-between">
+                  <div class="cause-wrap d-flex flex-wrap justify-content-between" *ngIf="EventoAtual != null">
                       <figure class="m-0">
-                          <img src="../../assets/img/festanacao.jpg" alt="">
+                          <img src="{{EventoAtual.foto64}}" alt="">
                       </figure>
 
-                      <div class="cause-content-wrap">
+                      <div class="cause-content-wrap" style="width: 100%;">
                           <header class="entry-header d-flex flex-wrap align-items-center">
-                              <h3 class="entry-title w-100 m-0"><a href="#">Festa das nações</a></h3>
+                              <h3 class="entry-title w-100 m-0"><a href="#">{{EventoAtual.titulo}}</a></h3>
 
                               <div class="posted-date">
-                                  <a href="#">Aug 25, 2018 </a>
+                                  <a href="#">{{EventoAtual.data_hora | date:'dd/MM/yyyy'}} - {{EventoAtual.hora}}</a>
                               </div><!-- .posted-date -->
 
                               <div class="cats-links">
-                                  <a href="#">Ball Room New York</a>
+                                  <a href="#">{{EventoAtual.endereco}}</a>
                               </div><!-- .cats-links -->
                           </header><!-- .entry-header -->
 
                           <div class="entry-content">
-                              <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur.</p>
+                              <p >{{EventoAtual.descricao}}</p>
                           </div><!-- .entry-content -->
 
                           <div class="entry-footer mt-5">
