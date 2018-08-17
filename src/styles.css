@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 @import '~swiper/dist/css/swiper.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body {
     color: #262626;
     font-size: 16px;
@@ -2140,3 +2141,14 @@ ul.tabs-nav .tab-nav.active {
     background: #131212;
     text-align: center;
 }
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {    
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+  }

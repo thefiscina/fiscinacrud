@@ -16,6 +16,8 @@ import { RequestService } from './request.service';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -42,7 +44,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   imports: [
     BrowserModule,
     HttpClientModule,
-    SwiperModule    
+    SwiperModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule    
   ],
   providers: [RequestService, {
     provide: SWIPER_CONFIG,

@@ -14,10 +14,10 @@ export class HomeEventsComponent implements OnInit {
   constructor(private _services : RequestService) { }
 
   ngOnInit() {    
-    this.ObterdadosSobre();    
+    this.ObterdadosEventos();    
   }
 
-  ObterdadosSobre(){
+  ObterdadosEventos(){
     this._services.getEventosService().then((result) => {             
       this.Eventos = result["result"];
       console.log(this.Eventos); 

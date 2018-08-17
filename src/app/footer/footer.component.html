@@ -6,20 +6,18 @@
                       <div class="foot-about">
                           <h2><a class="foot-logo" href="#"><img style="width: 40vh;" src="../../assets/img/logoapexwhite.png" alt=""></a></h2>
 
-                          <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Mauris temp us vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolo.</p>
-
+                          <!-- <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Mauris temp us vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolo.</p> -->
                           <ul class="d-flex flex-wrap align-items-center">
-                              <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                              <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                              <li><a href="{{Servico!= null? Servico.twitter : ''}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="{{ Servico!= null? Servico.facebook : ''}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>                             
                           </ul>
                       </div><!-- .foot-about -->
                   </div><!-- .col -->
-
                   <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <!-- <h2><a class="foot-logo" href="#"><img style="width: 40vh;" src="../../assets/img/umadecal.jpg" alt=""></a></h2> -->
+                 </div>
+                  <!-- <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                       <h2>Links úteis </h2>
 
                       <ul>
@@ -31,10 +29,11 @@
                           <li><a href="#">Portfolio</a></li>
                           <li><a href="#">News</a></li>
                       </ul>
-                  </div><!-- .col -->
+                  </div> -->
 
                   <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                      <div class="foot-latest-news">
+                        <!-- <h2><a class="foot-logo" href="#"><img style="width: 40vh;" src="../../assets/img/bleia.jpg" alt=""></a></h2> -->
+                      <!-- <div class="foot-latest-news">
                           <h2>Últimas notícias</h2>
 
                           <ul>
@@ -53,7 +52,7 @@
                                   <div class="posted-date">MArch 12, 2018</div>
                               </li>
                           </ul>
-                      </div><!-- .foot-latest-news -->
+                      </div> -->
                   </div><!-- .col -->
 
                   <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
@@ -61,9 +60,9 @@
                           <h2>Contato</h2>
 
                           <ul>
-                              <li><i class="fa fa-phone"></i><span>+55 27 9999-9999</span></li>
-                              <li><i class="fa fa-envelope"></i><span>apex@hotmail.com</span></li>
-                              <li><i class="fa fa-map-marker"></i><span>rua ...</span></li>
+                              <li><i class="fa fa-phone"></i><span>{{ Servico!= null? Servico.telefone1 : ''}}</span></li>
+                              <li><i class="fa fa-envelope"></i><span style="overflow: hidden;">{{ Servico!= null? Servico.email : ''}}</span></li>
+                              <li><i class="fa fa-map-marker"></i><span>{{ Servico!= null? Servico.endereco : ''}}</span></li>
                           </ul>
                       </div><!-- .foot-contact -->
 
