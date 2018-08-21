@@ -1,78 +1,42 @@
-    <footer class="site-footer">
-      <div class="footer-widgets">
+    <footer  class="site-footer">
+      <div id="contato" class="footer-widgets">
           <div class="container">
               <div class="row">
-                  <div class="col-12 col-md-6 col-lg-3">
-                      <div class="foot-about">
-                          <h2><a class="foot-logo" href="#"><img style="width: 40vh;" src="../../assets/img/logoapexwhite.png" alt=""></a></h2>
-
-                          <!-- <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Mauris temp us vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolo.</p> -->
+                    <div class="col-6 col-md-12 col-lg-9 ">
+                            <div class="foot-contact">
+                                <h2>Contato</h2>
+      
+                                <ul>
+                                    <li><i class="fa fa-phone"></i><span>{{ Servico!= null? Servico.telefone1 : ''}}</span></li>
+                                    <li><i class="fa fa-envelope"></i><span >{{ Servico!= null? Servico.email : ''}}</span></li>
+                                    <li><i class="fa fa-map-marker"></i><span>{{ Servico!= null? Servico.endereco : ''}}</span></li>
+                                </ul>
+                                  <!-- <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Mauris temp us vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolo.</p> -->
                           <ul class="d-flex flex-wrap align-items-center">
-                              <li><a href="{{Servico!= null? Servico.twitter : ''}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                              <li><a href="{{ Servico!= null? Servico.facebook : ''}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>                             
-                          </ul>
+                                <li><a href="{{Servico!= null? Servico.twitter : ''}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="{{ Servico!= null? Servico.facebook : ''}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>                             
+                            </ul>
+                            </div><!-- .foot-contact -->
+      
+                        </div><!-- .col -->
+                  <div class="col-6 col-md-12 col-lg-3">
+                      <div class="foot-about">
+                          <h2>
+                              <a class="foot-logo" ><img style="width: 30vh;" src="../../assets/img/logoapexwhite.png" alt=""></a>
+                             
+                            </h2>
+                            <h2>
+                                    <a class="foot-logo" ><img style="width: 30vh;" src="../../assets/img/umadecal.jpg" alt=""></a>
+                            </h2>
+                            <h2>
+                                    <a class="foot-logo" ><img style="width: 20vh;" src="../../assets/img/bleia.jpg" alt=""></a>
+                            </h2>
+
+                        
                       </div><!-- .foot-about -->
                   </div><!-- .col -->
-                  <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                        <!-- <h2><a class="foot-logo" href="#"><img style="width: 40vh;" src="../../assets/img/umadecal.jpg" alt=""></a></h2> -->
-                 </div>
-                  <!-- <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                      <h2>Links úteis </h2>
-
-                      <ul>
-                          <li><a href="#">Privacy Polticy</a></li>
-                          <li><a href="#">Become  a Volunteer</a></li>
-                          <li><a href="#">Donate</a></li>
-                          <li><a href="#">Testimonials</a></li>
-                          <li><a href="#">Causes</a></li>
-                          <li><a href="#">Portfolio</a></li>
-                          <li><a href="#">News</a></li>
-                      </ul>
-                  </div> -->
-
-                  <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                        <!-- <h2><a class="foot-logo" href="#"><img style="width: 40vh;" src="../../assets/img/bleia.jpg" alt=""></a></h2> -->
-                      <!-- <div class="foot-latest-news">
-                          <h2>Últimas notícias</h2>
-
-                          <ul>
-                              <li>
-                                  <h3><a href="#">A new cause to help</a></h3>
-                                  <div class="posted-date">MArch 12, 2018</div>
-                              </li>
-
-                              <li>
-                                  <h3><a href="#">We love to help people</a></h3>
-                                  <div class="posted-date">MArch 12, 2018</div>
-                              </li>
-
-                              <li>
-                                  <h3><a href="#">The new ideas for helping</a></h3>
-                                  <div class="posted-date">MArch 12, 2018</div>
-                              </li>
-                          </ul>
-                      </div> -->
-                  </div><!-- .col -->
-
-                  <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                      <div class="foot-contact">
-                          <h2>Contato</h2>
-
-                          <ul>
-                              <li><i class="fa fa-phone"></i><span>{{ Servico!= null? Servico.telefone1 : ''}}</span></li>
-                              <li><i class="fa fa-envelope"></i><span style="overflow: hidden;">{{ Servico!= null? Servico.email : ''}}</span></li>
-                              <li><i class="fa fa-map-marker"></i><span>{{ Servico!= null? Servico.endereco : ''}}</span></li>
-                          </ul>
-                      </div><!-- .foot-contact -->
-
-                      <!-- <div class="subscribe-form">
-                          <form class="d-flex flex-wrap align-items-center">
-                              <input type="email" placeholder="Your email">
-                              <input type="submit" value="send">
-                          </form>
-                      </div> -->
-                  </div><!-- .col -->
+             
               </div><!-- .row -->
           </div><!-- .container -->
       </div><!-- .footer-widgets -->
@@ -82,7 +46,7 @@
               <div class="row">
                   <div class="col-12">
                       <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script><i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">Fiscina</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script><i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.linkedin.com/in/jonathas-fiscina-a54b0ab0/" target="_blank">Fiscina</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                   </div><!-- .col-12 -->
               </div><!-- .row -->
