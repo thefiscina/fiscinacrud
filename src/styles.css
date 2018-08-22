@@ -2171,3 +2171,20 @@ ul.tabs-nav .tab-nav.active {
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
+
+.mx-auto {
+    margin-right: auto!important;
+    
+}
+
+.rounded-circle {
+    border-radius: 50%!important;
+    max-height: 30vh;
+    overflow: hidden;
+    width: 30vh;
+    max-width: 30vh;
+}
+
+swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
+    overflow: hidden !important;
+}
