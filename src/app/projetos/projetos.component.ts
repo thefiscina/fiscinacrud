@@ -5,6 +5,7 @@ import {
   SwiperScrollbarInterface, SwiperPaginationInterface
 } from 'ngx-swiper-wrapper';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import * as  $ from 'jquery';
 
 @Component({
   selector: 'app-projetos',
@@ -22,13 +23,13 @@ export class ProjetosComponent implements OnInit {
   end: any;
   now: any;
 
+
+  
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
-    slidesPerView: 3,
+    slidesPerView: $(window).width() <= 768 ? 1 : 3,
     spaceBetween: 40,
     speed: 2000,
-    autoplay: true,
-    loop: true,
 
   };
 

@@ -8,9 +8,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <style type="text/css">
-   html {
+    html {
       height: 100%;
     }
+
     .app-loading {
       position: relative;
       display: flex;
@@ -20,6 +21,7 @@
       height: 100%;
       top: 100pt;
     }
+
     .app-loading .spinner {
       height: 200px;
       width: 200px;
@@ -32,6 +34,7 @@
       right: 0;
       margin: auto;
     }
+
     .app-loading .spinner .path {
       stroke-dasharray: 1, 200;
       stroke-dashoffset: 0;
@@ -39,11 +42,13 @@
       stroke-linecap: round;
       stroke: #ddd;
     }
+
     @keyframes rotate {
       100% {
         transform: rotate(360deg);
       }
     }
+
     @keyframes dash {
       0% {
         stroke-dasharray: 1, 200;
@@ -58,22 +63,22 @@
         stroke-dashoffset: -124px;
       }
     }
-
-    
   </style>
 </head>
 
 <body>
   <app-root>
-      <div class="app-loading">
-          <div class="logo"><img src="assets/img/logoapex.png" style="width: 30vw" alt="My App Logo"></div>
-          <svg class="spinner" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-          </svg>
-        </div>
+    <div class="app-loading">
+      <div class="logo">
+        <img src="assets/img/logoapex.png" style="width: 30vw" alt="My App Logo">
+      </div>
+      <svg class="spinner" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+      </svg>
+    </div>
   </app-root>
   <!-- <script type="text/javascript" src="../src/js/jquery.js"></script> -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="../src/js/jquery.collapsible.min.js"></script>
   <script type="text/javascript" src="../src/js/swiper.min.js"></script>
   <script type="text/javascript" src="../src/js/jquery.countdown.min.js"></script>
@@ -82,21 +87,32 @@
   <script type="text/javascript" src="../src/js/jquery.barfiller.js"></script>
   <script type="text/javascript" src="../src/js/custom.js"></script>
   <script>
-  window.onscroll = function() {scrollFunction()};
+    window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("myBtn").style.display = "block";
-    } else {
+      } else {
         document.getElementById("myBtn").style.display = "none";
+      }
     }
-}
+    $(document).ready(function () {
+      'use strict';
+      $('.hamburger-menu').on('click', function () {
+        $(this).toggleClass('open');
+        $('.site-navigation').toggleClass('show');
+      });
+      $('.navegacao').on('click', function () {
+        $('.hamburger-menu').click();
+      });
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-</script>
+    })
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
 </body>
+
 </html>

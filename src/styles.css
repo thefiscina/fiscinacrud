@@ -2184,7 +2184,56 @@ ul.tabs-nav .tab-nav.active {
     width: 30vh;
     max-width: 30vh;
 }
+.tituloHeader {
+    font-size: 70px !important;
+}
 
+.iconesBoxer{
+    font-size: 6rem;
+}
 swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
     overflow: hidden !important;
+}
+
+.imgFooter{
+    width: 30vh;
+}
+@media only screen and (max-width: 768px) {
+    .tituloHeader {
+        font-size: 14pt !important;
+    } 
+    .icon-box {
+        padding: 30px;
+        border-radius: 24px;
+        background: #ecf2f5;
+        text-align: center;
+        transition: all .35s;
+        width: 15vh;
+        height: 20vh;
+    }
+    .iconesBoxer{
+        font-size: 2rem;
+    }
+    .icon-box .entry-title {
+        margin-top: 0;
+        font-size: 10px;
+        font-weight: 2;
+        color: #262626;
+    }
+    .home-page-icon-boxes {
+        padding: 30px 0;
+    }
+    .section-heading .entry-title {
+        position: relative;
+        padding-bottom: 5px;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .imgFooter{
+        width: 10vh;
+    }
+    .textfooter{
+        word-wrap: break-word;
+    }
 }
