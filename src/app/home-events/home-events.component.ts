@@ -19,8 +19,7 @@ export class HomeEventsComponent implements OnInit {
 
   ObterdadosEventos(){
     this._services.getEventosService().then((result) => {             
-      this.Eventos = result["result"];
-      console.log(this.Eventos); 
+      this.Eventos = result["result"];      
       this.separarEventoAtual(this.Eventos);
     }, (err) => {   
       console.log('erro ao solicitar');   
@@ -29,15 +28,15 @@ export class HomeEventsComponent implements OnInit {
   
   separarEventoAtual(eventos){    
     eventos.forEach(value => {
-      console.log(value);
+      
       var d = new Date(value.data_hora)
       var hora = parseInt(value.hora.split(':')[0]);
       var min = parseInt(value.hora.split(':')[1]);
       d.setHours(hora,min)
       value.datacerta = d;
+      value.data_hora = new Date(value.data_hora);
       this.EventosFuturos.push(value);
-    });        
-    console.log(this.EventosFuturos);
+    });            
     this.EventoAtual =  this.EventosFuturos.sort((a,b) => a.datacerta - b.datacerta)[0];
      this.EventosFuturos.sort((a,b) => a.datacerta - b.datacerta).shift();
     this.Eventos =  this.EventosFuturos.sort((a,b) => a.datacerta - b.datacerta);

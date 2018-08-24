@@ -14,8 +14,7 @@ export class FooterComponent implements OnInit {
   }
   ObterdadosSobre(){
     this._services.getService().then((result) => {             
-      this.Servico = result["result"];
-      console.log(this.Servico); 
+      this.Servico = result["result"];      
     }, (err) => {   
       console.log('erro ao solicitar');   
     });  

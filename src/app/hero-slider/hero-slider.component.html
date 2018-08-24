@@ -1,5 +1,5 @@
 <div id="principal" class="swiper-container hero-slider">
-    <swiper [config]="config" >
+    <swiper #swiper [config]="config"  (indexChange)="onIndexChange($event)"  (swiperTouchEnd)="resume($event)">
 
         <div class="hero-content-wrap" *ngIf="Cabecalho != null && Cabecalho.fotoslider164 != null  && Cabecalho.fotoslider164 != ''">
             <img src="{{Cabecalho.fotoslider164}}" alt="">

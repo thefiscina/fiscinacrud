@@ -40,8 +40,7 @@ export class ProjetosComponent implements OnInit {
 
   ObterdadosProjetos() {
     this._services.getProjetosService().then((result) => {
-      this.contarDiasrestantes(result["result"])
-      console.log(this.Projetos);
+      this.contarDiasrestantes(result["result"])      
     }, (err) => {
       console.log('erro ao solicitar');
     });

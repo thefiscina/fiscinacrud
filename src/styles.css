@@ -2007,7 +2007,7 @@ ul.tabs-nav .tab-nav.active {
 --------------------------------------------------------------*/
 .footer-widgets {
     position: relative;
-    padding: 96px 0 90px;
+    padding: 96px 0 0px;
     font-weight: 500;
     color: #929191;
     background: url("assets/img/hero1.jpg") no-repeat center;

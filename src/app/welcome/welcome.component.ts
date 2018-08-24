@@ -21,7 +21,7 @@ export class WelcomeComponent implements OnInit {
   ObterdadosSobre(){
     this._services.getDadosSobreService().then((result) => {             
       this.Sobre = result["result"][0];
-      console.log(this.Sobre); 
+      
     }, (err) => {   
       console.log('erro ao solicitar');   
     });  
@@ -30,7 +30,7 @@ export class WelcomeComponent implements OnInit {
   Obterdadoscabecalho(){
     this._services.getDadoscabecalhoService().then((result) => {             
       this.Cabecalho = result["result"][0];
-      console.log(this.Cabecalho); 
+      
     }, (err) => {   
       console.log('erro ao solicitar');   
     });  

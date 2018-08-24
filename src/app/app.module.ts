@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -13,7 +13,7 @@ import { TimeComponent } from './time/time.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RequestService } from './request.service';
 
-import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SwiperModule, SwiperDirective } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -48,7 +48,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     BrowserAnimationsModule,
     MatProgressBarModule    
   ],
-  providers: [RequestService, {
+  providers: [RequestService, SwiperDirective, {
     provide: SWIPER_CONFIG,
     useValue: DEFAULT_SWIPER_CONFIG
   }],
