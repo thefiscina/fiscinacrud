@@ -26,21 +26,21 @@
           <div class="row">
               <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
                   <div class="site-branding d-flex align-items-center" style="padding: 0px;">
-                     <a class="d-block" href="/" rel="home"><img style="width: 40vh;" class="d-block" src="{{Cabecalho != null?  Cabecalho.logo64 : ''}}" alt="logo"></a>
+                     <a class="d-block" rel="home"><img style="width: 40vh;" class="d-block" src="{{Cabecalho != null?  Cabecalho.logo64 : ''}}" alt="logo"></a>
                   </div><!-- .site-branding -->
 
                   <nav class="site-navigation d-flex justify-content-end align-items-center">
                       <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                          <li class="current-menu-item"><a href="#principal" class="navegacao">Principal</a></li>
-                          <li><a href="#sobrenos" class="navegacao">Sobre nós</a></li>
-                          <li><a href="#eventos" class="navegacao">Eventos</a></li>
+                          <li class="current-menu-item"><a href="#principal" onclick="acionaMenu()" class="navegacao">Principal</a></li>
+                          <li><a href="#sobrenos" onclick="acionaMenu()" class="navegacao">Sobre nós</a></li>
+                          <li><a href="#eventos" onclick="acionaMenu()" class="navegacao">Eventos</a></li>
                           <!-- <li><a href="#galeria">Galeria</a></li> -->
-                          <li><a href="#projetos" class="navegacao">Projetos</a></li>
-                          <li><a href="#contato" class="navegacao">Contato</a></li>
+                          <li><a href="#projetos" onclick="acionaMenu()" class="navegacao">Projetos</a></li>
+                          <li><a href="#contato" onclick="acionaMenu()" class="navegacao">Contato</a></li>
                       </ul>
                   </nav><!-- .site-navigation -->
 
-                  <div class="hamburger-menu d-lg-none">
+                  <div class="hamburger-menu d-lg-none" onclick="acionaMenu()">
                       <span></span>
                       <span></span>
                       <span></span>
