@@ -2189,14 +2189,14 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .iconesBoxer{
-    font-size: 6rem;
+    font-size: 6rem !important;
 }
 swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
     overflow: hidden !important;
 }
 
 .imgFooter{
-    width: 30vh;
+    width: 30vh !important;
 }
 @media only screen and (max-width: 768px) {
     .tituloHeader {
@@ -2212,7 +2212,7 @@ swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
         height: 20vh;
     }
     .iconesBoxer{
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
     .icon-box .entry-title {
         margin-top: 0;
@@ -2231,7 +2231,7 @@ swiper > .swiper.s-wrapper .swiper-wrapper .swiper-slide {
         text-align: center;
     }
     .imgFooter{
-        width: 10vh;
+        width: 10vh !important;
     }
     .textfooter{
         word-wrap: break-word;
