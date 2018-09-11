@@ -248,7 +248,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .hero-slider {
     /* max-height: 820px; */
-    max-height: 80vh;
+    max-height: 100vh;
 }
 
 .hero-content-wrap {
@@ -265,7 +265,7 @@ a:hover, a:active {
 .hero-content-wrap img {
     display: block;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     margin: 0 auto;
     -o-object-fit: cover;
     object-fit: cover;
