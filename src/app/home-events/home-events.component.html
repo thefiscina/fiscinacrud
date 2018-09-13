@@ -5,92 +5,60 @@
               <div class="upcoming-events">
                   <div class="section-heading">
                       <h2 class="entry-title">Eventos futuros</h2>
-                  </div><!-- .section-heading -->
+                  </div>
                   <div class="event-wrap d-flex flex-wrap justify-content-between" *ngFor="let evento of Eventos" >
                       <figure class="m-0">
                           <img src="{{evento.foto64}}" alt="">
                       </figure>
-
                       <div class="event-content-wrap">
                           <header class="entry-header d-flex flex-wrap align-items-center">
-                              <h3 class="entry-title w-100 m-0"><a href="#">{{evento.titulo}}</a></h3>
-
+                              <h3 class="entry-title w-100 m-0"><a>{{evento.titulo}}</a></h3>
                               <div class="posted-date">
-                                <a href="#">{{evento.data_hora | date:'dd/MM/yyyy'}} - {{evento.hora}}</a>
-                            </div><!-- .posted-date -->
-
+                                <a>{{evento.data_hora | date:'dd/MM/yyyy'}} - {{evento.hora}}</a>
+                            </div>
                             <div class="cats-links">
-                                <a href="#">{{evento.endereco}}</a>
-                            </div><!-- .cats-links -->
-                          </header><!-- .entry-header -->
-
+                                <a>{{evento.endereco}}</a>
+                            </div>
+                          </header>
                           <div class="entry-content">
-                              <p class="m-0">{{evento.descricao}}</p>
-                          </div><!-- .entry-content -->
-
-                          <div class="entry-footer">
-                              <a href="#">Saiba mais</a>
-                          </div><!-- .entry-footer -->
-                      </div><!-- .event-content-wrap -->
-                  </div><!-- .event-wrap -->               
-              </div><!-- .upcoming-events -->
-          </div><!-- .col -->
-
+                              <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="m-0">{{evento.descricao}}</p>
+                          </div>
+                          <div class="entry-footer" *ngIf="evento.url">
+                              <a href="{{evento.url}}" target="_blank">Saiba mais</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
           <div class="col-12 col-lg-6">
               <div class="featured-cause">
                   <div class="section-heading">
                       <h2 class="entry-title">Próximo evento</h2>
-                  </div><!-- .section-heading -->
-
+                  </div>
                   <div class="cause-wrap d-flex flex-wrap justify-content-between" *ngIf="EventoAtual != null">
                       <figure class="m-0">
                           <img src="{{EventoAtual.foto64}}" alt="">
                       </figure>
-
                       <div class="cause-content-wrap" style="width: 100%;">
                           <header class="entry-header d-flex flex-wrap align-items-center">
-                              <h3 class="entry-title w-100 m-0"><a href="#">{{EventoAtual.titulo}}</a></h3>
-
+                              <h3 class="entry-title w-100 m-0"><a>{{EventoAtual.titulo}}</a></h3>
                               <div class="posted-date">
-                                  <a href="#">{{EventoAtual.data_hora | date:'dd/MM/yyyy'}} - {{EventoAtual.hora}}</a>
-                              </div><!-- .posted-date -->
-
+                                  <a>{{EventoAtual.data_hora | date:'dd/MM/yyyy'}} - {{EventoAtual.hora}}</a>
+                              </div>
                               <div class="cats-links">
-                                  <a href="#">{{EventoAtual.endereco}}</a>
-                              </div><!-- .cats-links -->
-                          </header><!-- .entry-header -->
-
+                                  <a>{{EventoAtual.endereco}}</a>
+                              </div>
+                          </header>
                           <div class="entry-content">
-                              <p >{{EventoAtual.descricao}}</p>
-                          </div><!-- .entry-content -->
-
-                          <div class="entry-footer mt-5">
-                              <a href="#" class="btn gradient-bg mr-2">Saiba como participar</a>
-                          </div><!-- .entry-footer -->
-                      </div><!-- .cause-content-wrap -->
-
-                      <!-- <div class="fund-raised w-100">
-                          <div class="featured-fund-raised-bar barfiller">
-                              <div class="tipWrap">
-                                  <span class="tip"></span>
-                              </div>
-
-                              <span class="fill" data-percentage="83"></span>
+                              <p>{{EventoAtual.descricao}}</p>
                           </div>
-
-                          <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                              <div class="fund-raised-total mt-4">
-                                  Raised: $56 880
-                              </div>
-
-                              <div class="fund-raised-goal mt-4">
-                                  Goal: $70 000
-                              </div>
+                          <div class="entry-footer mt-5" *ngIf="EventoAtual.url">
+                              <a href="{{EventoAtual.url}}" target="_blank" class="btn gradient-bg mr-2">Saiba como participar</a>
                           </div>
-                      </div> -->
-                  </div><!-- .cause-wrap -->
-              </div><!-- .featured-cause -->
-          </div><!-- .col -->
-      </div><!-- .row -->
-  </div><!-- .container -->
-</div><!-- .home-page-events -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
