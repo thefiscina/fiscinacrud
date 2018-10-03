@@ -3,8 +3,7 @@
 
 <head>
   <title>APEX</title>
-
-  <!-- Required meta tags -->
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <style type="text/css">
@@ -63,9 +62,7 @@
         stroke-dashoffset: -124px;
       }
     }
-  </style>
-  <link rel="stylesheet" type="text/css" href="../src/fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
-  <script src="../src/js/modernizr-custom.js"></script>
+  </style>    
 </head>
 
 <body>
@@ -74,29 +71,13 @@
     <div class="app-loading">
       <div class="logo">
         <img src="assets/img/logoapex.png" style="width: 30vw" alt="My App Logo">
-      </div>
-      <!-- <svg class="spinner" viewBox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-      </svg> -->
+      </div>  
     </div>
   </app-root>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.collapsible/1.2/jquery.collapsible.min.js"></script>
-  <!-- <script src="../src/js/imagesloaded.pkgd.min.js"></script>
-  <script src="../src/js/masonry.pkgd.min.js"></script>
-  <script src="../src/js/classie.js"></script>
-  <script src="../src/js/main.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.collapsible/1.2/jquery.collapsible.min.js"></script>  
   <script>
-    window.onscroll = function () { scrollFunction() };
-    window.onload = function () {
-     //  galeria();
-    }
-    
-
-    function chkObject(elemId) {
-      return (document.getElementById(elemId)) ? true : false;
-    }
-
+    window.onscroll = function () { scrollFunction() };       
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("myBtn").style.display = "block";
@@ -104,83 +85,15 @@
         document.getElementById("myBtn").style.display = "none";
       }
     }
-
     function topFunction() {
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
-
     function acionaMenu() {
       $('.hamburger-menu').toggleClass('open');
       $('.site-navigation').toggleClass('show');
       intervalo = setInterval('check()', 500);
     }
   </script>
-  <script>        
-
-    function galeria() {
-
-	var support = { transitions: Modernizr.csstransitions },
-		// transition end event name
-		transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
-		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-		onEndTransition = function( el, callback ) {
-			var onEndCallbackFn = function(ev) {
-				if( support.transitions ) {
-					if( ev.target != this ) return;
-					this.removeEventListener( transEndEventName, onEndCallbackFn );
-				}
-				if( callback && typeof callback === 'function' ) { callback.call(this); }
-			};
-			if( support.transitions ) {
-				el.addEventListener( transEndEventName, onEndCallbackFn );
-			}
-			else {
-				onEndCallbackFn();
-			}
-		};
-
-new GridFx(document.querySelector('.grid'), {
-        imgPosition: {
-          x: -0.5,
-          y: 1
-        },
-        onOpenItem: function (instance, item) {
-          instance.items.forEach(function (el) {
-            if (item != el) {
-              var delay = Math.floor(Math.random() * 50);
-              el.style.WebkitTransition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), -webkit-transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
-              el.style.transition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
-              el.style.WebkitTransform = 'scale3d(0.1,0.1,1)';
-              el.style.transform = 'scale3d(0.1,0.1,1)';
-              el.style.opacity = 0;
-            }
-          });
-        },
-        onCloseItem: function (instance, item) {
-          instance.items.forEach(function (el) {
-            if (item != el) {
-              el.style.WebkitTransition = 'opacity .4s, -webkit-transform .4s';
-              el.style.transition = 'opacity .4s, transform .4s';
-              el.style.WebkitTransform = 'scale3d(1,1,1)';
-              el.style.transform = 'scale3d(1,1,1)';
-              el.style.opacity = 1;
-
-              onEndTransition(el, function () {
-                el.style.transition = 'none';
-                el.style.WebkitTransform = 'none';
-              });
-            }
-          });
-        }
-      });
-     
-    }
-
-
-
-  </script>
-
 </body>
-
 </html>
