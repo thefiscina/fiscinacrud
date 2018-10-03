@@ -1,0 +1,28 @@
+<app-site-header id="menuHeader"></app-site-header>
+<style>
+  
+</style>
+<div class="container" style="margin-right: 0 !important;">
+  <ng-masonry-grid [masonryOptions]="{ transitionDuration: '0.8s', gutter: 5 }" [useAnimation]="true" [useImagesLoaded]="true"
+    [scrollAnimationOptions]="{ animationEffect: 'effect-3', minDuration : 0.4, maxDuration : 0.7 }">
+
+    <ng-masonry-grid-item id="{{'masonry-item-'+i}}" *ngFor="let item of masonryItems; let i = index;" (click)="AbrirImagem($event)">
+      <img src="{{item.url}}" alt="No image" />
+    </ng-masonry-grid-item>
+  </ng-masonry-grid>
+
+
+  <div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close" (click)="closeModal()">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01" src="{{Img}}">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption">teste</div>
+  </div>
+
+  <button onclick="topFunction()" id="myBtn" title="Ir para o topo">
+    <i class="fa fa-toggle-up" style="font-size:2rem"></i>
+  </button>

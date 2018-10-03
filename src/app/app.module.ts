@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
@@ -18,16 +18,24 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-
+import { HomeComponent } from './home/home.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { NoticiaspageComponent } from './noticiaspage/noticiaspage.component';
+import { GaleriaComponent } from './galeria/galeria.component';
+import { TimerSectionComponent } from './timer-section/timer-section.component';
+import { NgMasonryGridModule } from 'ng-masonry-grid';
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto',
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
   loop: true
 };
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },   
+  { path: 'noticias', component: NoticiasComponent },  
+  { path: 'galeria', component: GaleriaComponent },  
+  { path: '**', component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
@@ -39,14 +47,24 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     WelcomeComponent,
     HomeEventsComponent,
     ProjetosComponent,
-    TimeComponent      
+    TimeComponent,
+    HomeComponent,
+    NoticiasComponent,
+    NoticiaspageComponent,
+    GaleriaComponent,
+    TimerSectionComponent      
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     SwiperModule,
     BrowserAnimationsModule,
-    MatProgressBarModule    
+    MatProgressBarModule,
+    NgMasonryGridModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )    
   ],
   providers: [RequestService, SwiperDirective, {
     provide: SWIPER_CONFIG,

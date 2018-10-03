@@ -26,7 +26,7 @@
           <div class="row">
               <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
                   <div class="site-branding d-flex align-items-center" style="padding: 0px;">
-                     <a class="d-block" rel="home"><img style="width: 40vh;" class="d-block" src="{{Cabecalho != null?  Cabecalho.logo64 : ''}}" alt="logo"></a>
+                     <a [routerLink]="['/']" class="d-block" rel="home"><img style="width: 40vh;" class="d-block" src="{{Cabecalho != null?  Cabecalho.logo64 : ''}}" alt="logo"></a>
                   </div><!-- .site-branding -->
 
                   <nav class="site-navigation d-flex justify-content-end align-items-center">
@@ -37,6 +37,8 @@
                           <!-- <li><a href="#galeria">Galeria</a></li> -->
                           <li><a href="#projetos" onclick="acionaMenu()" class="navegacao">Projetos</a></li>
                           <li><a href="#contato" onclick="acionaMenu()" class="navegacao">Contato</a></li>
+                          <!-- <li><a [routerLink]="['/noticias']" onclick="acionaMenu()" class="navegacao">Notícias</a></li>
+                          <li><a [routerLink]="['/galeria']" onclick="acionaMenu()" class="navegacao">Galeria</a></li> -->
                       </ul>
                   </nav><!-- .site-navigation -->
 
