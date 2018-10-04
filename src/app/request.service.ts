@@ -84,6 +84,19 @@ export class RequestService {
         });
     }
 
+    getGaleriaService() {
+        var dado = { serviceID: this.varService }
+        return new Promise((resolve, reject) => {
+            this.http.post(this.apiUrl + 'galeria/service/', JSON.stringify(dado), {
+                headers: new HttpHeaders().set("Content-Type", "application/json")
+            })
+                .subscribe(res => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
+    }
 
     //instagram
     getInstagram() {
